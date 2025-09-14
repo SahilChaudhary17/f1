@@ -14,14 +14,128 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #000000;
+  min-height: calc(100vh - 56px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+/* F1-like navbar tweaks */
+.navbar {
+  background-color: #000 !important;
+}
+
+.navbar-nav .nav-link {
+  color: #fff !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ff1801 !important;
+}
+
+/* New F1 header layout */
+.f1-header {
+  background-color: #0d0f14;
+}
+
+.f1-topbar {
+  background: #0d0f14 !important;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.f1-mainbar {
+  background: #0d0f14 !important;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.f1-mainbar .container {
+  position: relative;
+}
+
+/* diagonal stripe accents behind main bar */
+.f1-mainbar .container::before,
+.f1-mainbar .container::after {
+  content: "";
+  position: absolute;
+  top: -18px;
+  bottom: -18px;
+  width: 220px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 60%, rgba(255,255,255,0) 100%);
+  transform: skewX(-18deg);
+  pointer-events: none;
+}
+
+.f1-mainbar .container::before {
+  left: 18%;
+}
+
+.f1-mainbar .container::after {
+  left: 36%;
+}
+
+.f1-logo {
+  height: 32px;
+}
+
+/* Align FIA logo with left gutter like F1 brand */
+.f1-left-margin {
+  margin-left: 12px;
+}
+
+.f1-btn-signin {
+  border-color: rgba(255,255,255,0.35) !important;
+  color: #fff !important;
+}
+
+.f1-btn-subscribe {
+  background: #ff1801 !important;
+  border-color: #ff1801 !important;
+  color: #fff !important;
+}
+
+.f1-nav-link {
+  position: relative;
+  padding: 0.5rem 1rem;
+}
+
+.f1-nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0.75rem;
+  right: 0.75rem;
+  bottom: -8px;
+  height: 3px;
+  background: #ff1801;
+  opacity: 0;
+  transform: scaleX(0);
+  transition: all 180ms ease;
+}
+
+.f1-nav-link:hover::after,
+.f1-nav-link:focus::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+/* Open dropdowns on hover (no click required) */
+.f1-mainbar .nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.f1-mainbar .dropdown-menu {
+  margin-top: 0;
+}
+
+.caret-down {
+  font-size: 0.85em;
+  margin-left: 6px;
+  color: rgba(255,255,255,0.7);
 }
 
 .App-link {
