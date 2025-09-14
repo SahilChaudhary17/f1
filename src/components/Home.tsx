@@ -39,6 +39,34 @@ const Home: React.FC = () => {
             </div>
             </section>
 
+            {/* Testing card below hero */}
+            <section className="testing-section">
+                <div className="testing-grid">
+                    <div className="testing-card">
+                        <div className="testing-content">
+                            <div className="testing-label">TESTING</div>
+                            <div className="testing-title"><span className="testing-dot"></span>Sakhir</div>
+                            <div className="testing-subtitle">FORMULA 1 ARAMCO PRE-SEASON TESTING 2025</div>
+                            <div className="testing-date">26 – 28 FEB</div>
+                        </div>
+                        <div className="testing-image">
+                            <img src="/assets/news1.jpg" alt="Testing" />
+                        </div>
+                    </div>
+                    <div className="testing-card">
+                        <div className="testing-content">
+                            <div className="testing-label">TESTING</div>
+                            <div className="testing-title"><span className="testing-dot"></span>Barcelona</div>
+                            <div className="testing-subtitle">FORMULA 1 MID-SEASON TESTING 2025</div>
+                            <div className="testing-date">12 – 14 JUN</div>
+                        </div>
+                        <div className="testing-image">
+                            <img src="/assets/news1.jpg" alt="Testing" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <div className="conatainer-fluid row d-flex" style={{ gap: "20px", justifyContent: "center", alignItems: "center", marginTop: "30px" }}>
 
                 <Link to='/drivers' className="card shadow col-md-3" style={{ backgroundColor: "#87ceeb", alignItems: "center", textDecoration: 'none' }}>

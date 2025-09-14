@@ -226,3 +226,29 @@
     background-color: #f1efe6;
     padding: 24px 0;
 }
+
+/* Testing card styles */
+.testing-section{
+    padding: 16px;
+}
+.testing-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+.testing-card{
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 24px;
+    background: #f3efe9;
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 12px;
+    padding: 20px 24px;
+}
+.testing-content{ display: flex; flex-direction: column; gap: 14px; text-align: left; }
+.testing-label{ color:#6b7280; font-weight:800; letter-spacing:0.02em; }
+.testing-title{ font-weight:900; font-size: 28px; display:flex; align-items:center; gap:10px; }
+.testing-dot{ width:10px; height:10px; background:#ff1801; border-radius:50%; display:inline-block; }
+.testing-subtitle{ color:#6b7280; font-weight:700; }
+.testing-date{ font-weight:800; font-size: 18px; margin-top: 12px; }
+.testing-image img{ width:100%; height:100%; object-fit:cover; border-radius: 8px; }
